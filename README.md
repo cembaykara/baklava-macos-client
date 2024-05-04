@@ -1,8 +1,10 @@
 # Baklava for macOS
 
-Welcome to Baklava! Baklava is a macOS application that allows you to interact with your self-hosted instance of Baklava Server. Baklava Server is a feature flag management system that you need to run locally or host on your own server. With Baklava, you can easily manage your feature flags right on your macOS menubar.
+Welcome to Baklava! Baklava is a macOS application that allows you to interact with your self-hosted instance of [Baklava Server](https://github.com/cembaykara/baklava-server). Baklava Server is a feature flag management system that you need to run locally or host on your own server. With Baklava, you can easily manage your feature flags right on your macOS menubar.
 
 This repository contains the source code for a test macOS client application for the Baklava feature flag system. It's designed to be a menubar app that provides a basic interface for interacting with feature flags managed by a Baklava server.
+
+![Screenshot](Screenshots/Baklava.png)
 
 ---
 
@@ -16,7 +18,7 @@ This repository contains the source code for a test macOS client application for
 - ⭕️ Ability to toggle feature flags (**TODO**)
 ---
  **Important Note:**
-    This client requires the **Baklava Server** and a supported database solution.
+    This client requires the [Baklava Server](https://github.com/cembaykara/baklava-server) and a supported database solution.
 
 ---
 
