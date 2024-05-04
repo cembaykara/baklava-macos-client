@@ -48,7 +48,9 @@ struct MenuBarWindow: View {
 			
 			List {
 				ForEach(featureFlagViewModel.flags) { flag in
-					FeatureFlagItem(flag: flag, onDisable: featureFlagViewModel.onToggleFlag)
+					FeatureFlagItem(flag: flag) {
+						featureFlagViewModel.onToggle(flag)
+					}
 						.listRowSeparator(.hidden)
 						.swipeActions(edge: .trailing, allowsFullSwipe: true) {
 							Button(role: .destructive) { featureFlagViewModel.deleteFlag(withId: flag.id) } label: {

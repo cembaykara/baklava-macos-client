@@ -11,7 +11,7 @@ struct FeatureFlagItem: View {
 	
 	@Bindable var flag: Flag
 
-	let onDisable: () -> Void
+	let onToggle: () -> Void
 	
     var body: some View {
 		HStack {
@@ -21,11 +21,11 @@ struct FeatureFlagItem: View {
 			Spacer()
 			Toggle("", isOn: $flag.enabled)
 				.toggleStyle(.switch)
-				.onChange(of: flag.enabled) { onDisable() }
+				.onChange(of: flag.enabled) { onToggle() }
 		}
     }
 }
 
 #Preview {
-	FeatureFlagItem(flag: Flag(id: UUID(), name: "My Flag", enabled: true), onDisable: {})
+	FeatureFlagItem(flag: Flag(id: UUID(), name: "My Flag", enabled: true), onToggle: {})
 }

@@ -38,5 +38,9 @@ import BaklavaServices
 			.store(in: &cancellable)
 	}
 	
-	func onToggleFlag() { }
+	func onToggle(_ flag: Flag) {
+		service.update(flag)
+			.sink { print($0) } receiveValue: { print($0) }
+			.store(in: &cancellable)
+	}
 }
