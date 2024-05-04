@@ -1,0 +1,15 @@
+{
+  "originHash" : "91d48ebf826f282587ede5f6b4876dbaf496c7aef816b3a9b6ffc4ea20e879c4",
+  "pins" : [
+    {
+      "identity" : "baklava-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/cembaykara/baklava-swift",
+      "state" : {
+        "revision" : "cf405759ea5b7ab787d721d69688d3f8396cf1aa",
+        "version" : "0.1.0"
+      }
+    }
+  ],
+  "version" : 3
+}
