@@ -15,7 +15,7 @@ This repository contains the source code for a test macOS client application for
 - ✅ Menubar icon for easy access
 - ✅ Basic UI for viewing available feature flags
 - ✅ Ability to add and remove feature flags
-- ⭕️ Ability to toggle feature flags (**TODO**)
+- ✅ Ability to toggle feature flags
 ---
  **Important Note:**
     This client requires the [Baklava Server](https://github.com/cembaykara/baklava-server) and a supported database solution.
