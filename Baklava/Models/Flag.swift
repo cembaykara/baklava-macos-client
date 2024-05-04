@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Core
+import BaklavaCore
 
 @Observable final class Flag: FeatureFlag, Codable, Identifiable {
 	var id: UUID?

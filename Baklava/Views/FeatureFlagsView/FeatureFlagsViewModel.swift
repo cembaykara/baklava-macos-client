@@ -7,7 +7,7 @@
 
 import Foundation
 import Combine
-import Services
+import BaklavaServices
 
 @Observable class FeatureFlagsViewModel {
 	var flags: [Flag] = []

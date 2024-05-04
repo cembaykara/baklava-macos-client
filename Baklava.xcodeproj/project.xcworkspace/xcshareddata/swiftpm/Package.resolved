@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/cembaykara/baklava-swift",
       "state" : {
-        "revision" : "cf405759ea5b7ab787d721d69688d3f8396cf1aa",
-        "version" : "0.1.0"
+        "revision" : "23e1b8fcb712b4449b918e7b79dc7561454b1caf",
+        "version" : "0.1.1"
       }
     }
   ],
