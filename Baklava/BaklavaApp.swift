@@ -6,9 +6,16 @@
 //
 
 import SwiftUI
+import BaklavaCore
 
 @main
 struct BaklavaApp: App {
+	
+	init() {
+		let config = BaklavaConfiguration(host: "127.0.0.1", port: 8080)
+		Baklava.setConfiguration(config)
+	}
+	
 	var body: some Scene {
 		MenuBarExtra("YAY", systemImage: "circle") {
 			MenuBarWindow()
