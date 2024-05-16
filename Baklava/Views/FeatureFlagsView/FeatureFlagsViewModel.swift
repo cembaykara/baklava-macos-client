@@ -12,35 +12,39 @@ import BaklavaServices
 @Observable class FeatureFlagsViewModel {
 	var flags: [Flag] = []
 	
-	private var cancellable = Set<AnyCancellable>()
+	private var cancellable = [String: AnyCancellable?]()
 	private let service = Service(Flag.self)
 	
 	init() { fetchFlags() }
 	
 	func fetchFlags() {
-		service.getFlags()
+		cancellable["fetch"] = service.getFlags()
 			.receive(on: DispatchQueue.main)
-			.sink { print($0) } receiveValue: { self.flags = $0 }
-			.store(in: &cancellable)
+			.sink { print($0) } receiveValue: { [weak self] flags in
+				self?.flags = flags
+			}
 	}
 	
 	func deleteFlag(withId id: UUID?) {
 		guard let id = id else { return }
-		service.deleteBy(id: id)
+		cancellable["delete"] = service.deleteBy(id: id)
 			.sink { print($0) } receiveValue: { print($0) }
-			.store(in: &cancellable)
 		fetchFlags()
 	}
 	
 	func createNewFlag(fromFlag flag: Flag) {
-		service.createNew(object: flag)
-			.sink { print($0) } receiveValue: { self.flags.append($0) }
-			.store(in: &cancellable)
+		cancellable["create"] = service.createNew(object: flag)
+			.sink { print($0) } receiveValue: { [weak self] flag in
+				self?.flags.append(flag)
+			}
 	}
 	
 	func onToggle(_ flag: Flag) {
-		service.update(flag)
+		cancellable["update"] = service.update(flag)
 			.sink { print($0) } receiveValue: { print($0) }
-			.store(in: &cancellable)
+		
+		print(cancellable.count)
 	}
+	
+	deinit { cancellable.removeAll() }
 }

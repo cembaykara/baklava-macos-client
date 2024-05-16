@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9128B1352BE6E12500BE3249 /* BaklavaCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9128B1342BE6E12500BE3249 /* BaklavaCore */; };
-		9128B1372BE6E12500BE3249 /* BaklavaServices in Frameworks */ = {isa = PBXBuildFile; productRef = 9128B1362BE6E12500BE3249 /* BaklavaServices */; };
 		915A76762BD594BA0082A6D4 /* BaklavaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A76752BD594BA0082A6D4 /* BaklavaApp.swift */; };
 		915A76782BD594BA0082A6D4 /* MenuBarWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A76772BD594BA0082A6D4 /* MenuBarWindow.swift */; };
 		915A767A2BD594BB0082A6D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 915A76792BD594BB0082A6D4 /* Assets.xcassets */; };
@@ -16,6 +14,8 @@
 		915A76862BD597520082A6D4 /* FeatureFlagItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A76852BD597520082A6D4 /* FeatureFlagItem.swift */; };
 		915A768A2BD5A2E10082A6D4 /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A76892BD5A2E10082A6D4 /* Flag.swift */; };
 		915A76902BD5A9540082A6D4 /* FeatureFlagsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A768F2BD5A9540082A6D4 /* FeatureFlagsViewModel.swift */; };
+		91FE530B2BF696250058384E /* BaklavaCore in Frameworks */ = {isa = PBXBuildFile; productRef = 91FE530A2BF696250058384E /* BaklavaCore */; };
+		91FE530D2BF696250058384E /* BaklavaServices in Frameworks */ = {isa = PBXBuildFile; productRef = 91FE530C2BF696250058384E /* BaklavaServices */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9128B1352BE6E12500BE3249 /* BaklavaCore in Frameworks */,
-				9128B1372BE6E12500BE3249 /* BaklavaServices in Frameworks */,
+				91FE530B2BF696250058384E /* BaklavaCore in Frameworks */,
+				91FE530D2BF696250058384E /* BaklavaServices in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,8 +129,8 @@
 			);
 			name = Baklava;
 			packageProductDependencies = (
-				9128B1342BE6E12500BE3249 /* BaklavaCore */,
-				9128B1362BE6E12500BE3249 /* BaklavaServices */,
+				91FE530A2BF696250058384E /* BaklavaCore */,
+				91FE530C2BF696250058384E /* BaklavaServices */,
 			);
 			productName = FeatureFlagClient;
 			productReference = 915A76722BD594BA0082A6D4 /* Baklava.app */;
@@ -161,7 +161,7 @@
 			);
 			mainGroup = 915A76692BD594BA0082A6D4;
 			packageReferences = (
-				9128B1332BE6E12500BE3249 /* XCRemoteSwiftPackageReference "baklava-swift" */,
+				91FE53092BF696250058384E /* XCRemoteSwiftPackageReference "baklava-swift" */,
 			);
 			productRefGroup = 915A76732BD594BA0082A6D4 /* Products */;
 			projectDirPath = "";
@@ -396,25 +396,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9128B1332BE6E12500BE3249 /* XCRemoteSwiftPackageReference "baklava-swift" */ = {
+		91FE53092BF696250058384E /* XCRemoteSwiftPackageReference "baklava-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/cembaykara/baklava-swift";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.1;
+				minimumVersion = 0.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9128B1342BE6E12500BE3249 /* BaklavaCore */ = {
+		91FE530A2BF696250058384E /* BaklavaCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9128B1332BE6E12500BE3249 /* XCRemoteSwiftPackageReference "baklava-swift" */;
+			package = 91FE53092BF696250058384E /* XCRemoteSwiftPackageReference "baklava-swift" */;
 			productName = BaklavaCore;
 		};
-		9128B1362BE6E12500BE3249 /* BaklavaServices */ = {
+		91FE530C2BF696250058384E /* BaklavaServices */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9128B1332BE6E12500BE3249 /* XCRemoteSwiftPackageReference "baklava-swift" */;
+			package = 91FE53092BF696250058384E /* XCRemoteSwiftPackageReference "baklava-swift" */;
 			productName = BaklavaServices;
 		};
 /* End XCSwiftPackageProductDependency section */
