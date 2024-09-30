@@ -14,6 +14,12 @@
 		915A76862BD597520082A6D4 /* FeatureFlagItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A76852BD597520082A6D4 /* FeatureFlagItem.swift */; };
 		915A768A2BD5A2E10082A6D4 /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A76892BD5A2E10082A6D4 /* Flag.swift */; };
 		915A76902BD5A9540082A6D4 /* FeatureFlagsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A768F2BD5A9540082A6D4 /* FeatureFlagsViewModel.swift */; };
+		918671CB2CA2000500EE923B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918671CA2CA2000100EE923B /* LoginViewModel.swift */; };
+		918671D02CA201F800EE923B /* BaklavaAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 918671CF2CA201F800EE923B /* BaklavaAuth */; };
+		918671D22CA9DAC600EE923B /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918671D12CA9DAC200EE923B /* AppState.swift */; };
+		918671D42CAB3CA600EE923B /* FeaturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918671D32CAB3CA600EE923B /* FeaturesView.swift */; };
+		918671D62CAB45F200EE923B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918671D52CAB45E900EE923B /* Environment.swift */; };
+		91B9DAE92CA1F5FA00EA4BC8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B9DAE82CA1F5FA00EA4BC8 /* LoginView.swift */; };
 		91FE530B2BF696250058384E /* BaklavaCore in Frameworks */ = {isa = PBXBuildFile; productRef = 91FE530A2BF696250058384E /* BaklavaCore */; };
 		91FE530D2BF696250058384E /* BaklavaServices in Frameworks */ = {isa = PBXBuildFile; productRef = 91FE530C2BF696250058384E /* BaklavaServices */; };
 /* End PBXBuildFile section */
@@ -27,6 +33,11 @@
 		915A76852BD597520082A6D4 /* FeatureFlagItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlagItem.swift; sourceTree = "<group>"; };
 		915A76892BD5A2E10082A6D4 /* Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
 		915A768F2BD5A9540082A6D4 /* FeatureFlagsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlagsViewModel.swift; sourceTree = "<group>"; };
+		918671CA2CA2000100EE923B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		918671D12CA9DAC200EE923B /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		918671D32CAB3CA600EE923B /* FeaturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesView.swift; sourceTree = "<group>"; };
+		918671D52CAB45E900EE923B /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		91B9DAE82CA1F5FA00EA4BC8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				918671D02CA201F800EE923B /* BaklavaAuth in Frameworks */,
 				91FE530B2BF696250058384E /* BaklavaCore in Frameworks */,
 				91FE530D2BF696250058384E /* BaklavaServices in Frameworks */,
 			);
@@ -46,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				915A76742BD594BA0082A6D4 /* Baklava */,
+				918671CE2CA201F800EE923B /* Frameworks */,
 				915A76732BD594BA0082A6D4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +74,8 @@
 		915A76742BD594BA0082A6D4 /* Baklava */ = {
 			isa = PBXGroup;
 			children = (
+				918671D52CAB45E900EE923B /* Environment.swift */,
+				918671D12CA9DAC200EE923B /* AppState.swift */,
 				915A76752BD594BA0082A6D4 /* BaklavaApp.swift */,
 				915A768D2BD5A9170082A6D4 /* Models */,
 				915A76842BD5973C0082A6D4 /* Views */,
@@ -82,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				915A76772BD594BA0082A6D4 /* MenuBarWindow.swift */,
+				918671C92CA1FFE400EE923B /* LoginView */,
 				915A768B2BD5A8D50082A6D4 /* FeatureFlagsView */,
 			);
 			path = Views;
@@ -92,6 +108,7 @@
 			children = (
 				915A768C2BD5A8F40082A6D4 /* Components */,
 				915A768F2BD5A9540082A6D4 /* FeatureFlagsViewModel.swift */,
+				918671D32CAB3CA600EE923B /* FeaturesView.swift */,
 			);
 			path = FeatureFlagsView;
 			sourceTree = "<group>";
@@ -110,6 +127,22 @@
 				915A76892BD5A2E10082A6D4 /* Flag.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		918671C92CA1FFE400EE923B /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				918671CA2CA2000100EE923B /* LoginViewModel.swift */,
+				91B9DAE82CA1F5FA00EA4BC8 /* LoginView.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		918671CE2CA201F800EE923B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +164,7 @@
 			packageProductDependencies = (
 				91FE530A2BF696250058384E /* BaklavaCore */,
 				91FE530C2BF696250058384E /* BaklavaServices */,
+				918671CF2CA201F800EE923B /* BaklavaAuth */,
 			);
 			productName = FeatureFlagClient;
 			productReference = 915A76722BD594BA0082A6D4 /* Baklava.app */;
@@ -189,11 +223,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91B9DAE92CA1F5FA00EA4BC8 /* LoginView.swift in Sources */,
 				915A76862BD597520082A6D4 /* FeatureFlagItem.swift in Sources */,
 				915A76782BD594BA0082A6D4 /* MenuBarWindow.swift in Sources */,
+				918671D22CA9DAC600EE923B /* AppState.swift in Sources */,
 				915A768A2BD5A2E10082A6D4 /* Flag.swift in Sources */,
 				915A76762BD594BA0082A6D4 /* BaklavaApp.swift in Sources */,
 				915A76902BD5A9540082A6D4 /* FeatureFlagsViewModel.swift in Sources */,
+				918671D42CAB3CA600EE923B /* FeaturesView.swift in Sources */,
+				918671CB2CA2000500EE923B /* LoginViewModel.swift in Sources */,
+				918671D62CAB45F200EE923B /* Environment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,13 +439,18 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/cembaykara/baklava-swift";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.0;
+				branch = "jwt-auth";
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		918671CF2CA201F800EE923B /* BaklavaAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 91FE53092BF696250058384E /* XCRemoteSwiftPackageReference "baklava-swift" */;
+			productName = BaklavaAuth;
+		};
 		91FE530A2BF696250058384E /* BaklavaCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 91FE53092BF696250058384E /* XCRemoteSwiftPackageReference "baklava-swift" */;

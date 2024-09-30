@@ -1,0 +1,24 @@
+{
+  "originHash" : "91d48ebf826f282587ede5f6b4876dbaf496c7aef816b3a9b6ffc4ea20e879c4",
+  "pins" : [
+    {
+      "identity" : "baklava-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/cembaykara/baklava-swift",
+      "state" : {
+        "branch" : "jwt-auth",
+        "revision" : "046df882c83c407d4da2a39fd2294030d9f25b34"
+      }
+    },
+    {
+      "identity" : "jwtdecode.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/auth0/JWTDecode.swift.git",
+      "state" : {
+        "revision" : "1e153ef009969543191970c66b7c60163c0b4a65",
+        "version" : "3.2.0"
+      }
+    }
+  ],
+  "version" : 3
+}
