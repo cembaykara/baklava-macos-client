@@ -12,15 +12,10 @@ import Combine
 
 @Observable class LoginViewModel {
     
-    var appState: AppState
-    
-    init(appState: AppState) {
-        self.appState = appState
-    }
+    var appState: AppState = Interactor.getAppState()
 
     func login(username: String, password: String) async {
-        let _ = try? await Auth.login(with: PasswordLoginCredentials(username: username, password: password))
-        
-        await appState.getLoginState()
+        let user = try? await Auth.login(with: PasswordLoginCredentials(username: username, password: password))
+        appState.user = user
     }
 }

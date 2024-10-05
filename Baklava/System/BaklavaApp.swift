@@ -21,7 +21,7 @@ struct BaklavaApp: App {
 	}
 	
 	var body: some Scene {
-		MenuBarExtra("YAY", systemImage: "circle") {
+		MenuBarExtra("YAY", systemImage: "flag.circle") {
             MenuBarWindow()
 		}
 		.menuBarExtraStyle(.window)

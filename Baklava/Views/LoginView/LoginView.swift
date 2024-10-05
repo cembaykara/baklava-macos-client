@@ -14,11 +14,7 @@ struct LoginView: View {
     @State var title: String = "Login"
     @State private var username: String = ""
     @State private var password: String = ""
-    @State private var loginViewModel: LoginViewModel
-    
-    init(appState: AppState) {
-        self.loginViewModel = .init(appState: appState)
-    }
+    @State private var loginViewModel = LoginViewModel()
     
     var body: some View {
         VStack {
@@ -60,6 +56,5 @@ struct LoginView: View {
 }
 
 #Preview {
-    var appState: AppState = .init()
-    LoginView(appState: AppState())
+    LoginView()
 }

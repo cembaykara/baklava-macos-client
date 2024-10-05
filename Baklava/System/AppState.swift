@@ -7,21 +7,15 @@
 import Foundation
 import SwiftUI
 import BaklavaAuth
+import BaklavaCore
 
 @Observable class AppState {
     
-    var loginState: LoginState = .loggedOut
-    
-    init() {
-        Task { await getLoginState() }
+    var loginState: LoginState {
+        get { user != nil ? .loggedIn : .loggedOut }
     }
     
-    func getLoginState() async {
-        if (await Auth.getAuthToken()) != nil {
-            loginState = .loggedIn
-        }
-    }
-    
+    var user: User?
 }
 
 enum LoginState {

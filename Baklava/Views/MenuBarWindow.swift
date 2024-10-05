@@ -14,12 +14,9 @@ struct MenuBarWindow: View {
 	var body: some View {
 		
         switch appState.loginState {
-            case .loggedIn:
-                FeaturesView()
-            case .loggedOut:
-                LoginView(appState: appState)
+            case .loggedIn: FeaturesView()
+            case .loggedOut: LoginView()
         }
-        
 	}
 }
 

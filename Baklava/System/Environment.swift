@@ -7,7 +7,7 @@
 import SwiftUI
 
 private struct AppStateKey: EnvironmentKey {
-    static let defaultValue: AppState = .init()
+    static let defaultValue: AppState = Interactor.getAppState()
 }
 
 extension EnvironmentValues {
