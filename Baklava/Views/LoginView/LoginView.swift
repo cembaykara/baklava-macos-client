@@ -11,7 +11,6 @@ struct LoginView: View {
     
     @Environment(\.appState) var appState: AppState
     
-    @State var title: String = "Login"
     @State private var username: String = ""
     @State private var password: String = ""
     @State private var loginViewModel = LoginViewModel()
@@ -19,10 +18,11 @@ struct LoginView: View {
     var body: some View {
         VStack {
             
-            Text(title)
-                .bold()
-            
+            Text("Login")
+                .font(.title3)
+                .padding(.top)
             Divider()
+                .padding(.bottom)
             
             Group {
                 TextField("username", text: $username)
@@ -32,26 +32,28 @@ struct LoginView: View {
             
             Button("Login") {
                 Task {
-                    await loginViewModel.login(username: username, password: password)
+                    await loginViewModel.login(
+                        username: username,
+                        password: password
+                    )
                 }
             }
             .padding(.top)
             .buttonStyle(.borderedProminent)
             
+            Spacer()
+            
             Group {
                 Text("Don't have an account?")
-                    .padding(.top)
                 Button { }
                 label: {  Text("Sign Up")  }
                     .buttonStyle(.borderless)
+                    .padding(.bottom)
             }
             .font(.caption)
-            
-            
-            Spacer()
         }
-        .padding(.top)
-        .frame(width: 240)
+        .frame(width: 240, height: 320)
+        .isBusy($loginViewModel.isBusy)
     }
 }
 

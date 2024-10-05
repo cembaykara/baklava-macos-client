@@ -13,9 +13,13 @@ import Combine
 @Observable class LoginViewModel {
     
     var appState: AppState = Interactor.getAppState()
+    
+    var isBusy: Bool = false
 
     func login(username: String, password: String) async {
+        isBusy = true
         let user = try? await Auth.login(with: PasswordLoginCredentials(username: username, password: password))
         appState.user = user
+        isBusy = false
     }
 }

@@ -20,6 +20,8 @@
 		918671D22CA9DAC600EE923B /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918671D12CA9DAC200EE923B /* AppState.swift */; };
 		918671D42CAB3CA600EE923B /* FeaturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918671D32CAB3CA600EE923B /* FeaturesView.swift */; };
 		918671D62CAB45F200EE923B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918671D52CAB45E900EE923B /* Environment.swift */; };
+		918C01D32CB1EB37004AF318 /* ProgressViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918C01D22CB1EB27004AF318 /* ProgressViewModifier.swift */; };
+		918C01D72CB1EB83004AF318 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918C01D62CB1EB80004AF318 /* ViewExtensions.swift */; };
 		91B9DAE92CA1F5FA00EA4BC8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B9DAE82CA1F5FA00EA4BC8 /* LoginView.swift */; };
 		91FE530B2BF696250058384E /* BaklavaCore in Frameworks */ = {isa = PBXBuildFile; productRef = 91FE530A2BF696250058384E /* BaklavaCore */; };
 		91FE530D2BF696250058384E /* BaklavaServices in Frameworks */ = {isa = PBXBuildFile; productRef = 91FE530C2BF696250058384E /* BaklavaServices */; };
@@ -39,6 +41,8 @@
 		918671D12CA9DAC200EE923B /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		918671D32CAB3CA600EE923B /* FeaturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesView.swift; sourceTree = "<group>"; };
 		918671D52CAB45E900EE923B /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		918C01D22CB1EB27004AF318 /* ProgressViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewModifier.swift; sourceTree = "<group>"; };
+		918C01D62CB1EB80004AF318 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		91B9DAE82CA1F5FA00EA4BC8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,7 +94,7 @@
 				910B2B832CB174C40098215D /* System */,
 				915A768D2BD5A9170082A6D4 /* Models */,
 				915A76842BD5973C0082A6D4 /* Views */,
-				915A76792BD594BB0082A6D4 /* Assets.xcassets */,
+				918C01D12CB1EB1E004AF318 /* Resrouces */,
 				915A767B2BD594BB0082A6D4 /* Preview Content */,
 			);
 			path = Baklava;
@@ -154,6 +158,32 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		918C01D12CB1EB1E004AF318 /* Resrouces */ = {
+			isa = PBXGroup;
+			children = (
+				915A76792BD594BB0082A6D4 /* Assets.xcassets */,
+				918C01D52CB1EB77004AF318 /* Extensions */,
+				918C01D42CB1EB6A004AF318 /* ViewModifiers */,
+			);
+			path = Resrouces;
+			sourceTree = "<group>";
+		};
+		918C01D42CB1EB6A004AF318 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				918C01D22CB1EB27004AF318 /* ProgressViewModifier.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		918C01D52CB1EB77004AF318 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				918C01D62CB1EB80004AF318 /* ViewExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +272,8 @@
 				915A768A2BD5A2E10082A6D4 /* Flag.swift in Sources */,
 				915A76762BD594BA0082A6D4 /* BaklavaApp.swift in Sources */,
 				915A76902BD5A9540082A6D4 /* FeatureFlagsViewModel.swift in Sources */,
+				918C01D72CB1EB83004AF318 /* ViewExtensions.swift in Sources */,
+				918C01D32CB1EB37004AF318 /* ProgressViewModifier.swift in Sources */,
 				918671D42CAB3CA600EE923B /* FeaturesView.swift in Sources */,
 				918671CB2CA2000500EE923B /* LoginViewModel.swift in Sources */,
 				918671D62CAB45F200EE923B /* Environment.swift in Sources */,

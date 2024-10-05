@@ -12,7 +12,6 @@ struct MenuBarWindow: View {
     @Environment(\.appState) var appState: AppState
 	
 	var body: some View {
-		
         switch appState.loginState {
             case .loggedIn: FeaturesView()
             case .loggedOut: LoginView()
