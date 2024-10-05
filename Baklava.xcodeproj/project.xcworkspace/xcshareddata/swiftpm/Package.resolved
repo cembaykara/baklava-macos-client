@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/cembaykara/baklava-swift",
       "state" : {
-        "branch" : "jwt-auth",
-        "revision" : "046df882c83c407d4da2a39fd2294030d9f25b34"
+        "revision" : "4e5bd249353538f96766c7e291b4c548113ef741",
+        "version" : "0.1.11"
       }
     },
     {
