@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct FeaturesView: View {
+	
+	@Environment(\.appState) var appState
     
     @Bindable var featureFlagsViewModel = FeatureFlagsViewModel()
     @State private var temporaryText: String = ""
@@ -15,7 +17,15 @@ struct FeaturesView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            HStack {
+			HStack(spacing: 0) {
+				Image(systemName: "person.circle")
+					.imageScale(.large)
+					.background(Color.clear)
+					.padding(.leading, 8)
+					.onTapGesture {
+						appState.signOut()
+					}
+				
                 Spacer()
                 
                 Text("Feature Flags")
@@ -26,7 +36,7 @@ struct FeaturesView: View {
                 Image(systemName: "arrow.clockwise")
                     .imageScale(.large)
                     .onTapGesture { featureFlagsViewModel.fetchFlags() }
-                    .padding(.trailing)
+                    .padding(.trailing, 8)
             }
             .background(Color.clear)
             .padding(.vertical)
@@ -74,7 +84,13 @@ struct FeaturesView: View {
             .scrollBounceBehavior(.always)
             
             Spacer()
-        }.frame(height: 320)
-            .isBusy($isBusy)
+        }
+		.frame(height: 320)
+		.isBusy($isBusy)
     }
+}
+
+#Preview {
+//	FeaturesView()
+	MenuBarWindow()
 }

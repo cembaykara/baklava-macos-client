@@ -8,7 +8,6 @@
 import SwiftUI
 import BaklavaCore
 import BaklavaAuth
-import Combine
 
 @Observable class LoginViewModel {
     
@@ -18,7 +17,7 @@ import Combine
 
     func login(username: String, password: String) async {
         isBusy = true
-        let user = try? await Auth.login(with: PasswordLoginCredentials(username: username, password: password))
+		let user = try? await Auth.login(with: PasswordCredentails(username: username, password: password))
         appState.user = user
         isBusy = false
     }

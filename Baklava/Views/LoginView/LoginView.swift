@@ -26,7 +26,7 @@ struct LoginView: View {
             
             Group {
                 TextField("username", text: $username)
-                TextField("password", text: $password)
+				SecureField("password", text: $password)
             }
             .padding(.horizontal)
             

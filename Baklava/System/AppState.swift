@@ -7,7 +7,8 @@
 import Foundation
 import SwiftUI
 import BaklavaAuth
-import BaklavaCore
+@_spi(BKLInternal) import BaklavaCore // TODO: Will Remove
+import BaklavaAuth
 
 @Observable class AppState {
     
@@ -16,6 +17,18 @@ import BaklavaCore
     }
     
     var user: User?
+	
+	init() {
+		Task {
+			let tokenString = await Auth.getAuthToken()
+			user = try? User(tokenString ?? "")
+		}
+	}
+	
+	func signOut() {
+		Auth.logout()
+		self.user = nil
+	}
 }
 
 enum LoginState {
