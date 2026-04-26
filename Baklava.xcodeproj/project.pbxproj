@@ -16,15 +16,15 @@
 		915A768A2BD5A2E10082A6D4 /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A76892BD5A2E10082A6D4 /* Flag.swift */; };
 		915A76902BD5A9540082A6D4 /* FeatureFlagsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A768F2BD5A9540082A6D4 /* FeatureFlagsViewModel.swift */; };
 		918671CB2CA2000500EE923B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918671CA2CA2000100EE923B /* LoginViewModel.swift */; };
-		918671D02CA201F800EE923B /* BaklavaAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 918671CF2CA201F800EE923B /* BaklavaAuth */; };
 		918671D22CA9DAC600EE923B /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918671D12CA9DAC200EE923B /* AppState.swift */; };
 		918671D42CAB3CA600EE923B /* FeaturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918671D32CAB3CA600EE923B /* FeaturesView.swift */; };
 		918671D62CAB45F200EE923B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918671D52CAB45E900EE923B /* Environment.swift */; };
 		918C01D32CB1EB37004AF318 /* ProgressViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918C01D22CB1EB27004AF318 /* ProgressViewModifier.swift */; };
 		918C01D72CB1EB83004AF318 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918C01D62CB1EB80004AF318 /* ViewExtensions.swift */; };
+		91A1E8652F9ED7BE00EE0788 /* BaklavaAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 91A1E8642F9ED7BE00EE0788 /* BaklavaAuth */; };
+		91A1E8672F9ED7BE00EE0788 /* BaklavaCore in Frameworks */ = {isa = PBXBuildFile; productRef = 91A1E8662F9ED7BE00EE0788 /* BaklavaCore */; };
+		91A1E8692F9ED7BE00EE0788 /* BaklavaServices in Frameworks */ = {isa = PBXBuildFile; productRef = 91A1E8682F9ED7BE00EE0788 /* BaklavaServices */; };
 		91B9DAE92CA1F5FA00EA4BC8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B9DAE82CA1F5FA00EA4BC8 /* LoginView.swift */; };
-		91FE530B2BF696250058384E /* BaklavaCore in Frameworks */ = {isa = PBXBuildFile; productRef = 91FE530A2BF696250058384E /* BaklavaCore */; };
-		91FE530D2BF696250058384E /* BaklavaServices in Frameworks */ = {isa = PBXBuildFile; productRef = 91FE530C2BF696250058384E /* BaklavaServices */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,9 +51,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				918671D02CA201F800EE923B /* BaklavaAuth in Frameworks */,
-				91FE530B2BF696250058384E /* BaklavaCore in Frameworks */,
-				91FE530D2BF696250058384E /* BaklavaServices in Frameworks */,
+				91A1E8672F9ED7BE00EE0788 /* BaklavaCore in Frameworks */,
+				91A1E8692F9ED7BE00EE0788 /* BaklavaServices in Frameworks */,
+				91A1E8652F9ED7BE00EE0788 /* BaklavaAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +163,8 @@
 		918C01D12CB1EB1E004AF318 /* Resrouces */ = {
 			isa = PBXGroup;
 			children = (
+				91B86DDF2CF5193F00BBAB63 /* Colors */,
+				91B86DDE2CF5131D00BBAB63 /* Widgets */,
 				915A76792BD594BB0082A6D4 /* Assets.xcassets */,
 				918C01D52CB1EB77004AF318 /* Extensions */,
 				918C01D42CB1EB6A004AF318 /* ViewModifiers */,
@@ -186,6 +188,20 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		91B86DDE2CF5131D00BBAB63 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		91B86DDF2CF5193F00BBAB63 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -203,9 +219,9 @@
 			);
 			name = Baklava;
 			packageProductDependencies = (
-				91FE530A2BF696250058384E /* BaklavaCore */,
-				91FE530C2BF696250058384E /* BaklavaServices */,
-				918671CF2CA201F800EE923B /* BaklavaAuth */,
+				91A1E8642F9ED7BE00EE0788 /* BaklavaAuth */,
+				91A1E8662F9ED7BE00EE0788 /* BaklavaCore */,
+				91A1E8682F9ED7BE00EE0788 /* BaklavaServices */,
 			);
 			productName = FeatureFlagClient;
 			productReference = 915A76722BD594BA0082A6D4 /* Baklava.app */;
@@ -219,7 +235,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					915A76712BD594BA0082A6D4 = {
 						CreatedOnToolsVersion = 15.3;
@@ -236,7 +252,7 @@
 			);
 			mainGroup = 915A76692BD594BA0082A6D4;
 			packageReferences = (
-				91FE53092BF696250058384E /* XCRemoteSwiftPackageReference "baklava-swift" */,
+				91A1E8632F9ED7BE00EE0788 /* XCRemoteSwiftPackageReference "baklava-swift" */,
 			);
 			productRefGroup = 915A76732BD594BA0082A6D4 /* Products */;
 			projectDirPath = "";
@@ -317,6 +333,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -380,6 +397,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -410,6 +428,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 36RR7TN2A9;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -437,6 +456,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 36RR7TN2A9;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -479,30 +499,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		91FE53092BF696250058384E /* XCRemoteSwiftPackageReference "baklava-swift" */ = {
+		91A1E8632F9ED7BE00EE0788 /* XCRemoteSwiftPackageReference "baklava-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/cembaykara/baklava-swift";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.0;
+				minimumVersion = 0.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		918671CF2CA201F800EE923B /* BaklavaAuth */ = {
+		91A1E8642F9ED7BE00EE0788 /* BaklavaAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 91FE53092BF696250058384E /* XCRemoteSwiftPackageReference "baklava-swift" */;
+			package = 91A1E8632F9ED7BE00EE0788 /* XCRemoteSwiftPackageReference "baklava-swift" */;
 			productName = BaklavaAuth;
 		};
-		91FE530A2BF696250058384E /* BaklavaCore */ = {
+		91A1E8662F9ED7BE00EE0788 /* BaklavaCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 91FE53092BF696250058384E /* XCRemoteSwiftPackageReference "baklava-swift" */;
+			package = 91A1E8632F9ED7BE00EE0788 /* XCRemoteSwiftPackageReference "baklava-swift" */;
 			productName = BaklavaCore;
 		};
-		91FE530C2BF696250058384E /* BaklavaServices */ = {
+		91A1E8682F9ED7BE00EE0788 /* BaklavaServices */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 91FE53092BF696250058384E /* XCRemoteSwiftPackageReference "baklava-swift" */;
+			package = 91A1E8632F9ED7BE00EE0788 /* XCRemoteSwiftPackageReference "baklava-swift" */;
 			productName = BaklavaServices;
 		};
 /* End XCSwiftPackageProductDependency section */

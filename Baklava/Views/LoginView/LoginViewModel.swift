@@ -14,11 +14,16 @@ import BaklavaAuth
     var appState: AppState = Interactor.getAppState()
     
     var isBusy: Bool = false
+	var errorText: String?
 
     func login(username: String, password: String) async {
         isBusy = true
-		let user = try? await Auth.login(with: PasswordCredentails(username: username, password: password))
-        appState.user = user
+		
+		do {
+			let user = try await Auth.login(with: PasswordCredentials(username: username, password: password))
+			appState.user = user
+		} catch { errorText = error.localizedDescription }
+		
         isBusy = false
     }
 }

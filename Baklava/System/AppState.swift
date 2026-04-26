@@ -26,7 +26,7 @@ import BaklavaAuth
 	}
 	
 	func signOut() {
-		Auth.logout()
+		Auth.clearAuthState()
 		self.user = nil
 	}
 }

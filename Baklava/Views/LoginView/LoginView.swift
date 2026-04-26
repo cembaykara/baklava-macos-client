@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @Environment(\.appState) var appState: AppState
+//    @Environment(\.appState) var appState: AppState
     
     @State private var username: String = ""
     @State private var password: String = ""
@@ -43,6 +43,13 @@ struct LoginView: View {
             
             Spacer()
             
+			if let error = loginViewModel.errorText {
+				Text(error)
+					.font(.subheadline)
+			}
+			
+			Spacer()
+			
             Group {
                 Text("Don't have an account?")
                 Button { }

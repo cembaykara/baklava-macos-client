@@ -12,7 +12,7 @@ import BaklavaCore
 struct BaklavaApp: App {
     
 	init() {
-		let config = BaklavaConfiguration(
+		let config = Baklava.Configuration(
             logVerbosity: .critical,
             host: "127.0.0.1",
             port: 8080)
